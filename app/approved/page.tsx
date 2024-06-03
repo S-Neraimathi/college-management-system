@@ -172,7 +172,7 @@ export default function Approved() {
                                             </TableHeader>
                                             <TableBody>
                                                 {addSRequests?.map((request, index) => (
-                                                    <TableRow>
+                                                    <TableRow key={index + request.imageUrl}>
                                                         <TableCell>{index + 1}.</TableCell>
                                                         <TableCell>{request.name}</TableCell>
                                                         <TableCell>
@@ -208,7 +208,7 @@ export default function Approved() {
                                             </TableHeader>
                                             <TableBody>
                                                 {addRRequests?.map((request, index) => (
-                                                    <TableRow>
+                                                    <TableRow key={index + request.imageUrl}>
                                                         <TableCell>{index + 1}.</TableCell>
                                                         <TableCell>{request.name}</TableCell>
                                                         <TableCell>
@@ -261,7 +261,7 @@ export default function Approved() {
                                             </TableHeader>
                                             <TableBody>
                                                 {removeSRequests?.map((request, index) => (
-                                                    <TableRow>
+                                                    <TableRow key={index + request.removeId}>
                                                         <TableCell>{index + 1}.</TableCell>
                                                         <TableCell>{request.name}</TableCell>
                                                         <TableCell>{formatTimestamp(request.requestedTime)}</TableCell>
@@ -287,7 +287,7 @@ export default function Approved() {
                                             </TableHeader>
                                             <TableBody>
                                                 {removeRRequests?.map((request, index) => (
-                                                    <TableRow>
+                                                    <TableRow key={index + request.name}>
                                                         <TableCell>{index + 1}.</TableCell>
                                                         <TableCell>{request.name}</TableCell>
                                                         <TableCell>{formatTimestamp(request.requestedTime)}</TableCell>
@@ -332,7 +332,7 @@ export default function Approved() {
                                             </TableHeader>
                                             <TableBody>
                                                 {updateSRequests?.map((request, index) => (
-                                                    <TableRow>
+                                                    <TableRow key={request.description}>
                                                         <TableCell>{index + 1}.</TableCell>
                                                         <TableCell>{request.name}</TableCell>
                                                         <TableCell>{request.description}</TableCell>
@@ -360,7 +360,7 @@ export default function Approved() {
                                             </TableHeader>
                                             <TableBody>
                                                 {updateRRequests?.map((request, index) => (
-                                                    <TableRow>
+                                                    <TableRow key={request.updateId}>
                                                         <TableCell>{index + 1}.</TableCell>
                                                         <TableCell>{request.name}</TableCell>
                                                         <TableCell>{request.description}</TableCell>

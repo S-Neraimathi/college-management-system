@@ -59,7 +59,7 @@ export default function Page() {
             {startedTickets.length === 0 ? (
                 <div className="mt-8 text-center">
                     <p className="text-3xl font-bold">No ongoing repairs</p>
-                    <p className="text-lg text-gray-600">You're all caught up! No repairs in progress at the moment.</p>
+                    <p className="text-lg text-gray-600">You&apos;re all caught up! No repairs in progress at the moment.</p>
                 </div>
             ) : (
                 <div className="mt-4">

@@ -306,7 +306,7 @@ export default function Approve() {
                                     </TableHeader>
                                     <TableBody>
                                         {removeRequests?.map((request, index) => (
-                                            <TableRow>
+                                            <TableRow key={index + request.name}>
                                                 <TableCell>{index + 1}.</TableCell>
                                                 <TableCell>{request.name}</TableCell>
                                                 <TableCell>{formatTimestamp(request.requestedTime)}</TableCell>
@@ -340,7 +340,7 @@ export default function Approve() {
                                     </TableHeader>
                                     <TableBody>
                                         {updateRequests?.map((request, index) => (
-                                            <TableRow>
+                                            <TableRow key={index + request.name}>
                                                 <TableCell>{index + 1}.</TableCell>
                                                 <TableCell>{request.name}</TableCell>
                                                 <TableCell>

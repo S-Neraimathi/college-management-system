@@ -104,7 +104,7 @@ export default function Page() {
                     </select>
                 </div>
                 {selectedType && deviceIds.length === 0 && (
-                    <p className="text-lg text-gray-600">You're all caught up! No repairs in progress at the moment.</p>
+                    <p className="text-lg text-gray-600">You&apos;re all caught up! No repairs in progress at the moment.</p>
                 )}
                 {selectedType && deviceIds.length > 0 && (
                     <>
